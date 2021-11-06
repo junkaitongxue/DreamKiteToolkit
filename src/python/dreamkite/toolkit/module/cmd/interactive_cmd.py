@@ -39,9 +39,6 @@ class Cli(Cmd):
         # print 'Bye!'
         print("print this line after leaving the loop")
 
-    def precmd(self, line):
-        print("print this line before do a command")
-        return Cmd.precmd(self, line)
 
     def postcmd(self, stop, line):
         print("print this line after do a command")
