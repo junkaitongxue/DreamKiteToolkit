@@ -12,6 +12,14 @@ pyinstaller -F .\src\python\dreamkite\learnCommonModule\innosetup\hello.py --ico
 下载innosetup: https://jrsoftware.org/isinfo.php
 https://blog.csdn.net/2301_76161259/article/details/134327383
 
+步骤四：（如何网页能够打开本地的应用程序，需要自定义对应注册表协议）
+注册表位置：计算机\HKEY_CLASSES_ROOT\hello
+```
+[HKEY_CLASSES_ROOT\hello]
+@="helloProtocol"
+"URL Protocol"="helloProtocol"
+```
+
 补充pyinstaller参数：
 ```
 -D/--onedir：生成一个包含所有依赖文件的单文件夹目录。适合以框架形式编写工具代码，易于维护。
